@@ -1,7 +1,7 @@
 import "./App.css";
 import AppLogic from "./AppLogic";
 const App = () => {
-  const { handleChange, minutes } = AppLogic();
+  const { handleChange, minutes, exportToJson } = AppLogic();
   return (
     <div className="col-lg-8 mx-auto p-3 py-md-5">
       <header className="d-flex align-items-center pb-3 mb-5 border-bottom">
@@ -60,12 +60,12 @@ const App = () => {
           </div>
           <p className="fs-5 col-md-8">4. Download the configuration</p>
           <div className="mb-5">
-            <a
-              href="/docs/5.1/examples/"
+            <button
               className="btn btn-primary btn-lg px-4"
+              onClick={exportToJson}
             >
               Download configuration
-            </a>
+            </button>
           </div>
         </div>
       </main>
