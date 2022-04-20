@@ -32,8 +32,8 @@ const AppLogic = () => {
         added: now,
       },
       todayStats: {
-        successVotes: 1,
-        errorVotes: 1,
+        successVotes: 0,
+        errorVotes: 0,
         laterVotes: 0,
         lastSuccessVote: now,
         lastAttemptVote: now,
