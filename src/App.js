@@ -28,7 +28,7 @@ const App = () => {
               click here
             </a>
             <br />
-            2. Enter your username below
+            2. Enter your minecraft username below
             <br />
           </p>
           <div className="input-group mb-3">
