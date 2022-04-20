@@ -14,7 +14,7 @@ const App = () => {
       </header>
       <main>
         <h1>Get started with Auto Vote Rating (velocitycraft)</h1>
-        <p className="fs-5 col-md-8">
+        <p className="fs-5 col-md-12">
           Voting manually could be annoying and we understand that, that's why
           we bring a auto voting solution for you. Install the following browser
           extension{" "}
@@ -22,7 +22,7 @@ const App = () => {
         <hr />
         <h2>How to use it</h2>
         <div>
-          <p className="fs-5 col-md-8">
+          <p className="fs-5 col-md-12">
             1. Install the extension -{" "}
             <a href="https://chrome.google.com/webstore/detail/auto-vote-rating/mdfmiljoheedihbcfiifopgmlcincadd?hl=en">
               click here
@@ -31,7 +31,7 @@ const App = () => {
             2. Enter your minecraft username below
             <br />
           </p>
-          <div className="input-group mb-3">
+          <div className="input-group mb-1">
             <input
               type="text"
               className="form-control"
@@ -41,11 +41,14 @@ const App = () => {
               onChange={handleChange}
             />
           </div>
-          <p className="fs-5 col-md-8">3. Select next vote timing</p>
-          <p className="text-muted">
-            you will have to import this configuration before {minutes} minutes
+          <p className="fs-5 col-md-12">
+            3. Select next vote timing{" "}
+            <span className="fs-8 text-muted">
+              (you will have to import this configuration before {minutes}{" "}
+              minutes)
+            </span>
           </p>
-          <div className="input-group mb-3">
+          <div className="input-group mb-1">
             <select
               name="minutes"
               className="form-select"
@@ -58,8 +61,8 @@ const App = () => {
               <option value="60">60 minutes</option>
             </select>
           </div>
-          <p className="fs-5 col-md-8">4. Download the configuration</p>
-          <div className="mb-5">
+          <p className="fs-5 col-md-12">4. Download the configuration</p>
+          <div className="mb-1">
             <button
               className="btn btn-primary btn-lg px-4"
               onClick={exportToJson}
@@ -67,6 +70,7 @@ const App = () => {
               Download configuration
             </button>
           </div>
+          <p className="fs-5 col-md-12">5. Import the configuration</p>
         </div>
       </main>
     </div>
