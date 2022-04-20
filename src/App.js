@@ -41,28 +41,7 @@ const App = () => {
               onChange={handleChange}
             />
           </div>
-          <p className="fs-5 col-md-12">
-            3. Select next vote timing{" "}
-            <span className="fs-8 text-muted">
-              (you will have to import this configuration before {minutes}{" "}
-              minutes)
-            </span>
-          </p>
-          <div className="input-group mb-1">
-            <select
-              name="minutes"
-              className="form-select"
-              defaultValue={minutes}
-              onChange={handleChange}
-            >
-              <option value="2">2 minutes</option>
-              <option value="15">15 minutes</option>
-              <option value="30">30 minutes</option>
-              <option value="45">45 minutes</option>
-              <option value="60">60 minutes</option>
-            </select>
-          </div>
-          <p className="fs-5 col-md-12">4. Download the configuration</p>
+          <p className="fs-5 col-md-12">3. Download the configuration</p>
           <div className="mb-1">
             <button
               className="btn btn-primary btn-lg px-4"
@@ -71,7 +50,7 @@ const App = () => {
               Download configuration
             </button>
           </div>
-          <p className="fs-5 col-md-12">5. Import the configuration</p>
+          <p className="fs-5 col-md-12">4. Import the configuration</p>
         </div>
       </main>
     </div>

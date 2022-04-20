@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const AppLogic = () => {
   const [username, setUsername] = useState("");
-  const [minutes, setMinutes] = useState(30);
   const [configuration, setConfiguration] = useState({});
 
   useEffect(() => {
-    var now = new Date();
-    var future = now.setMinutes(now.getMinutes() + minutes);
+    var now = new Date().getTime();
 
     setConfiguration({
       settings: {
@@ -54,7 +52,7 @@ const AppLogic = () => {
             lastAttemptVote: now,
             added: now,
           },
-          time: future,
+          time: now,
           game: "minecraft-servers",
           name: "Velocity Craft",
           key: 1,
@@ -73,7 +71,7 @@ const AppLogic = () => {
             lastAttemptVote: now,
             added: now,
           },
-          time: future,
+          time: now,
           name: "Velocity Craft",
           key: 2,
         },
@@ -91,7 +89,7 @@ const AppLogic = () => {
             lastAttemptVote: now,
             added: now,
           },
-          time: future,
+          time: now,
           name: "Velocity Craft",
           key: 3,
         },
@@ -109,7 +107,7 @@ const AppLogic = () => {
             lastAttemptVote: now,
             added: now,
           },
-          time: future,
+          time: now,
           name: "Velocity Craft",
           key: 4,
         },
@@ -127,7 +125,7 @@ const AppLogic = () => {
             lastAttemptVote: now,
             added: now,
           },
-          time: future,
+          time: now,
           game: "minecraft-mp.com",
           addition: "",
           name: "Vote for",
@@ -147,7 +145,7 @@ const AppLogic = () => {
             lastAttemptVote: now,
             added: now,
           },
-          time: future,
+          time: now,
           name: "Velocity Craft",
           key: 6,
         },
@@ -165,7 +163,7 @@ const AppLogic = () => {
             lastAttemptVote: now,
             added: now,
           },
-          time: future,
+          time: now,
           name: "Velocity Craft ",
           key: 7,
         },
@@ -173,16 +171,8 @@ const AppLogic = () => {
     });
   }, [username]);
 
-  useEffect(() => {
-    console.log(configuration);
-  }, [configuration]);
-
   const handleChange = (e) => {
-    if (e.target.name == "minutes") {
-      setMinutes(e.target.value);
-    } else {
-      setUsername(e.target.value);
-    }
+    setUsername(e.target.value);
   };
 
   const downloadFile = ({ data, fileName, fileType }) => {
@@ -206,14 +196,13 @@ const AppLogic = () => {
     e.preventDefault();
     downloadFile({
       data: JSON.stringify(configuration),
-      fileName: `auto_vote_${username}_${minutes}.json`,
+      fileName: `auto_vote_${username}.json`,
       fileType: "text/json",
     });
   };
 
   return {
     handleChange,
-    minutes,
     exportToJson,
   };
 };
