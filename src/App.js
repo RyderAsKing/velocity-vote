@@ -20,38 +20,69 @@ const App = () => {
           extension{" "}
         </p>
         <hr />
-        <h2>How to use it</h2>
-        <div>
-          <p className="fs-5 col-md-12">
-            1. Install the extension -{" "}
-            <a href="https://chrome.google.com/webstore/detail/auto-vote-rating/mdfmiljoheedihbcfiifopgmlcincadd?hl=en">
-              click here
-            </a>
-            <br />
-            2. Enter your minecraft username below
-            <br />
-          </p>
-          <div className="input-group mb-1">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Username"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-              onChange={handleChange}
-            />
+        <div className="row">
+          <div className="col-8">
+            <div>
+              <p className="fs-5 col-md-12">
+                1. Install the extension -{" "}
+                <a href="https://chrome.google.com/webstore/detail/auto-vote-rating/mdfmiljoheedihbcfiifopgmlcincadd?hl=en">
+                  click here
+                </a>
+                <br />
+                2. Enter your minecraft username below
+                <br />
+              </p>
+              <div className="input-group mb-1">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Username"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  onChange={handleChange}
+                />
+              </div>
+              <p className="fs-5 col-md-12">3. Download the configuration</p>
+              <div className="mb-1">
+                <button
+                  className="btn btn-primary btn-lg px-4"
+                  onClick={exportToJson}
+                >
+                  Download configuration
+                </button>
+              </div>
+              <p className="fs-5 col-md-12">4. Import the configuration</p>
+            </div>
           </div>
-          <p className="fs-5 col-md-12">3. Download the configuration</p>
-          <div className="mb-1">
-            <button
-              className="btn btn-primary btn-lg px-4"
-              onClick={exportToJson}
-            >
-              Download configuration
-            </button>
+          <div className="col-4">
+            <h2>Video example</h2>
+            <div className="embed-responsive">
+              <iframe
+                className="embed-responsive-item"
+                src="/auto_vote.mp4"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
-          <p className="fs-5 col-md-12">4. Import the configuration</p>
         </div>
+        <hr />
+        <footer className="text-center">
+          <p className="fs-5">
+            <a
+              href="https://velocitycraft.net"
+              className="text-dark text-decoration-none"
+            >
+              <span className="fs-4">Auto Vote Rating</span>
+            </a>{" "}
+            is a free auto voting solution provided by{" "}
+            <a
+              href="https://velocitycraft.net"
+              className="text-dark text-decoration-none"
+            >
+              <span className="fs-4">VelocityCraft</span>
+            </a>
+          </p>
+        </footer>
       </main>
     </div>
   );
