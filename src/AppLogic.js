@@ -167,6 +167,24 @@ const AppLogic = () => {
           name: "Velocity Craft ",
           key: 7,
         },
+        {
+          rating: "TopMinecraftServers",
+          id: "18117",
+          nick: username,
+          stats: {
+            successVotes: 0,
+            monthSuccessVotes: 0,
+            lastMonthSuccessVotes: 0,
+            errorVotes: 0,
+            laterVotes: 0,
+            lastSuccessVote: now,
+            lastAttemptVote: now,
+            added: now,
+          },
+          time: now,
+          name: "Velocity Craft",
+          key: 8,
+        },
       ],
     });
   }, [username]);
